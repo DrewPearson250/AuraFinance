@@ -1,0 +1,6 @@
+{
+  "name": "AuraFinance - Personal Finance & Investment Analytics",
+  "description": "Analyze spending habits with automated categorization, flag anomalies, track investment portfolio performance, and compare returns against market benchmarks powered by Python analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
