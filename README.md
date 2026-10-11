@@ -150,21 +150,3 @@ QQQ,Invesco QQQ Trust,32,395.00,492.10,ETFs,Technology
 AAPL,Apple Inc.,40,185.00,232.50,Stocks,Consumer Tech
 NVDA,NVIDIA Corporation,65,88.50,138.25,Stocks,Semiconductors
 ```
-
----
-
-## 💼 Resume & Interview Talking Points
-
-If you feature this project on your resume or portfolio:
-
-* **Statistical Anomaly Detection:** Implemented an automated $Z$-score ($Z \ge 2.0$) and rolling median variance detection engine to flag abnormal spending surges and duplicate transactions.
-* **Financial Portfolio Mathematics:** Built algorithms computing cost basis, unrealized returns, weighted asset allocations, annualized Sharpe ratio proxies, and Herfindahl concentration index.
-* **Benchmark Alpha Comparison:** Developed responsive SVG chart visualizations tracking portfolio alpha and excess returns over the S&P 500 and Nasdaq 100.
-* **Stock Wishlist & Pipeline Architecture:** Designed a stock acquisition pipeline tracking target dip prices, identifying "Buy Zone" entries, and promoting watchlist assets into active holdings.
-* **Fault-Tolerant Market Data Service:** Architected an equity data lookup service combining real-time API queries with deterministic fallbacks to ensure instantaneous quote response times.
-
----
-
-## 📄 License
-
-This project is licensed under the Apache License 2.0. See the `LICENSE` file for details.
