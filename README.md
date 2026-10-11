@@ -1,136 +1,134 @@
-# AuraFinance — Personal Finance, Portfolio & Stock Wishlist Analytics
+<div align="center">
 
-[![React](https://img.shields.io/badge/React-19.0-61dafb?logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-8.x-646cff?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  <h1>💰 AuraFinance</h1>
+  <p><strong>Personal Finance, Investment Portfolio & Stock Wishlist Dashboard</strong></p>
 
-**AuraFinance** is a modern personal finance and investment analytics platform. It automatically categorizes spending habits from bank CSV files, flags statistical spending anomalies using $Z$-score algorithms, tracks investment portfolio returns against market benchmarks (S&P 500, Nasdaq 100), and monitors target stock acquisition prices via an interactive **Stock Wishlist**.
+  <p>
+    An intelligent, beginner-friendly financial dashboard that tracks your everyday spending, spots unusual charges, analyzes your investment gains against the S&P 500, and alerts you when dream stocks hit your target buy price.
+  </p>
 
----
+  <!-- Live Demo Button -->
+  <p>
+    <a href="https://ais-pre-b5wzigtee55fljcgluwfvw-138451579228.us-east1.run.app" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/badge/🚀_OPEN_LIVE_WEBSITE-CLICK_HERE_TO_LAUNCH-059669?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Live Website" />
+    </a>
+  </p>
 
-## 📸 Key Features
+  <!-- Badges -->
+  <p>
+    <img src="https://img.shields.io/badge/React_19-Modern_SPA-61dafb?logo=react&logoColor=black" alt="React 19" />
+    <img src="https://img.shields.io/badge/TypeScript-Type_Safe-3178c6?logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS_v4-Responsive_UI-38bdf8?logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/Vite_8-Blazing_Fast-646cff?logo=vite&logoColor=white" alt="Vite" />
+    <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License" />
+  </p>
 
-### 1. Automated Expense Categorization & Cash Flow Trends
-* **Smart Rule & Heuristic Categorizer:** Automatically parses and categorizes raw bank statements across 10 core financial categories (*Food & Dining, Transportation, Housing & Utilities, Education, Shopping & Retail, Health & Wellness, Entertainment, Travel, Income, Transfers*).
-* **Confidence Scoring & Inline Overrides:** Displays pattern confidence tags on categorized transactions and allows instant inline category reassignments.
-* **Cash Flow Visualizer:** Responsive SVG charts showing monthly inflows, outflows, and net savings rate curves with crosshair hover tooltips.
-
-### 2. Statistical Spending Anomaly Detection ($Z$-Score & Velocity)
-* **Outlier Detection Algorithm:** Computes category rolling medians and standard deviations ($Z \ge 2.0$) to flag uncharacteristic spending spikes (e.g., surprise $850 transmission repair vs. $54 automotive baseline).
-* **Velocity & Duplicate Charge Filter:** Identifies rapid repeated charges on the same day from identical payees.
-* **Actionable Alert Review:** Detailed severity indicators (*Critical Spike, Outlier Warning, Velocity Duplicate*) with persistent dismissal and restore functionality.
-
-### 3. Investment Portfolio Analytics & Market Benchmarks
-* **Holdings Ledger:** Real-time computation of total cost basis, current market value, unrealized gain/loss ($ and %), day's change, and portfolio weights.
-* **Benchmark Outperformance (Alpha):** Evaluates excess return against primary index funds including the **S&P 500 (`SPY`)**, **Nasdaq 100 (`QQQ`)**, and **Dow Jones (`DIA`)**.
-* **Risk & Diversification Metrics:** Calculates portfolio Sharpe ratio proxy and Herfindahl-Hirschman Index (HHI) concentration scores.
-* **Allocation Distribution:** Interactive segmented meters breaking down asset classes (*Stocks, ETFs, Crypto, Bonds*) and sector exposures (*Semiconductors, Software, Fixed Income, Consumer Tech*).
-
-### 4. Stock Wishlist & Target "Buy Zone" Tracker
-* **Target Dip Price Monitoring:** Track watchlist candidates (e.g., `TSLA`, `AMZN`, `PLTR`, `AMD`, `ETH`) with customizable target buy prices and investment theses.
-* **"In Buy Zone" Alerts:** Automatically highlights assets whose current market price has pulled back to or below your target entry price.
-* **1-Click Portfolio Promotion:** Click the shopping bag button on any wishlist item to purchase shares at the current quote and seamlessly transfer it into your active portfolio holdings.
-* **Live Batch Quote Refresh:** Update all watchlist ticker quotes and daily percentages simultaneously with a single click.
-
-### 5. Real-Time Financial Market Integration
-* **Live Ticker Quote Lookup:** Query real-time prices, daily change percentages, 52-week highs/lows, and market caps for 60+ major equities.
-* **Zero-Fail Fallback Engine:** Resilient multi-tier architecture ensures quote searches and sparkline histories respond instantaneously.
-
-### 6. CSV Data Ingestion & Export Engine
-* **Flexible Column Auto-Mapping:** Ingests bank and brokerage CSV exports with auto-detection for dates, payees, debits/credits, amounts, shares, and tickers.
-* **Sample Templates:** Pre-loaded with realistic multi-month sample transactions and investment positions for immediate testing.
-* **1-Click Export:** Download filtered transactions, holdings, or wishlist data as clean CSV files.
+</div>
 
 ---
 
-## 🛠️ Technology Stack
+## 🌟 What Can AuraFinance Do for You?
 
-| Layer | Technologies |
+If you find spreadsheets complicated or banking apps cluttered, **AuraFinance** gives you a clean, single-screen view of your entire financial life:
+
+| What you want to do | How AuraFinance helps |
 | :--- | :--- |
-| **Frontend Framework** | React 19 (Hooks, Functional Components, Context) |
-| **Language** | TypeScript (Strict Typing, Interfaces, Generic Types) |
-| **Styling** | Tailwind CSS v4 (`@import "tailwindcss";`) |
-| **Build & Tooling** | Vite 8, ESBuild |
-| **Icons & Visuals** | Lucide React |
-| **Persistence** | LocalStorage with schema versioning |
-| **Backend & APIs** | Express / Node.js, Financial Market Quote Services |
+| **Understand where your money goes** | Automatically sorts bank transactions into categories like *Food & Dining*, *Groceries*, *Rent*, and *Education*. |
+| **Catch accidental or surprise charges** | Automatically flags unusual spikes (e.g. surprise $850 car repair) and duplicate coffee charges so you never miss a billing error. |
+| **Know if your investments are beating the market** | Compares your portfolio return side-by-side with the **S&P 500** and **Nasdaq 100** with clear graphs. |
+| **Wait for stock dips without staring at charts** | Set target buy prices on your **Stock Wishlist** (e.g. "Buy Tesla if it hits $220"). When the price dips, it lights up green in the **Buy Zone**. |
+| **Buy with one click** | When a wishlist stock reaches your target price, hit the shopping bag button to purchase shares directly into your portfolio. |
 
 ---
 
-## 🚀 Getting Started
+## ⚡ Quick 1-Minute Tour
+
+You don't need any special setup or account to get started:
+
+1. **Open the Website:** Click the **[Launch Live Website](https://ais-pre-b5wzigtee55fljcgluwfvw-138451579228.us-east1.run.app)** button. It loads pre-filled with realistic sample data so you can explore immediately.
+2. **Import Your Own Data (Optional):** Click **Import CSV** in the top bar to upload your own bank or brokerage export, or keep exploring with the pre-loaded data.
+3. **Explore the Tabs:**
+   * **Overview:** High-level net worth, monthly savings rate, and cash flow curves.
+   * **Expenses & Trends:** Interactive ledger with search, category filters, and monthly spending charts.
+   * **Portfolio & Benchmarks:** Track your stocks, ETFs, and crypto gains vs. major index funds.
+   * **Stock Wishlist:** Monitor candidate stocks and see which ones are in the **Buy Zone**.
+   * **Spending Anomalies:** Review flagged outliers and click **Dismiss Flag** once reviewed.
+
+---
+
+## 🔍 Features in Detail
+
+### 📊 1. Automated Expense Categorization & Cash Flow
+* **Smart Categorization:** Automatically identifies merchants (e.g., *Trader Joe's*, *Starbucks*, *Uber*, *Coursera*, *Consolidated Edison*) and assigns them to the right budget bucket.
+* **Inline Editing:** Reassign any category directly from the table with a dropdown.
+* **Visual Cash Flow Chart:** Clean interactive bar charts comparing monthly income against expenses, plus your net monthly savings rate.
+
+### 🚨 2. Spending Anomaly & Duplicate Detection
+* **Statistical Outlier Detection:** Uses $Z$-score math ($Z \ge 2.0$) to compare each charge against your normal category spending history.
+* **Duplicate Charge Warnings:** Catches repeat charges made on the same date with identical payees and amounts.
+* **Working Dismiss & Restore Actions:** Click **Dismiss Flag** to acknowledge an alert and remove it from your counter, or restore it anytime with the **Restore Dismissed** button.
+
+### 📈 3. Portfolio Tracking & Market Benchmarks
+* **Live Market Math:** Calculates total cost basis, current market value, and total dollar and percentage gains.
+* **Benchmark Outperformance (Alpha):** See if your investments beat the S&P 500 (`SPY`) and Nasdaq 100 (`QQQ`).
+* **Diversification & Asset Classes:** View your split across Stocks, ETFs, Bonds, and Crypto, alongside a sector breakdown.
+
+### 🎯 4. Stock Wishlist & "Buy Zone" Dip Tracker
+* **Target Price Tracking:** Add companies you'd love to own (like `NVDA`, `TSLA`, `AAPL`, `AMZN`, `PLTR`) and write down your target entry price.
+* **"In Buy Zone" Badges:** Highlights assets in bright green whenever the market price is at or below your target price.
+* **1-Click Portfolio Transfer:** Seamlessly move a wishlist stock into your active portfolio holdings when executed.
+* **Live Batch Quote Refresh:** Update all watchlist stock prices simultaneously with one click.
+
+### 🔄 5. Live Market Price Lookup
+* Built-in instant financial market feed covering 60+ major tickers (`AAPL`, `MSFT`, `NVDA`, `TSLA`, `GOOGL`, `AMZN`, `VOO`, `QQQ`, `BTC`, etc.) with daily price changes and 14-day price sparklines.
+
+---
+
+## 💻 Tech Stack
+
+* **Frontend:** React 19, TypeScript
+* **Styling:** Tailwind CSS v4, Plus Jakarta Sans & JetBrains Mono typography
+* **Icons:** Lucide React
+* **Charts:** Interactive custom SVG vector charts (zero third-party bloat)
+* **Local Storage:** Automatic browser persistence so your edits, custom holdings, and wishlist items stay saved
+* **Build System:** Vite 8
+
+---
+
+## 🚀 Running Locally on Your Machine
+
+If you want to run AuraFinance on your own computer:
 
 ### Prerequisites
-* **Node.js** (v18.0.0 or higher recommended)
-* **npm** or **bun** / **yarn**
+Make sure you have [Node.js](https://nodejs.org/) (version 18 or higher) installed.
 
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/aurafinance.git
-   cd aurafinance
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open in browser:**
-   Navigate to `http://localhost:3000` to view the dashboard.
-
----
-
-## 📁 Project Structure
-
+### 1. Clone the project
+```bash
+git clone https://github.com/your-username/aurafinance.git
+cd aurafinance
 ```
-├── index.html                   # HTML entry point with metadata & typography
-├── package.json                 # Project dependencies & build scripts
-├── vite.config.ts               # Vite configuration with Tailwind CSS plugin
-├── tsconfig.json                # TypeScript compiler configuration
-├── src/
-│   ├── main.tsx                 # React application mounting point
-│   ├── App.tsx                  # Core state orchestrator, tab router & modals
-│   ├── index.css                # Tailwind CSS v4 & typography layer
-│   ├── types/
-│   │   └── finance.ts           # Type definitions (Transaction, Investment, WishlistItem)
-│   ├── data/
-│   │   └── sampleFinancialData.ts # Multi-month realistic financial fixtures & CSVs
-│   ├── services/
-│   │   └── marketData.ts        # Live market quote service & equity data registry
-│   ├── utils/
-│   │   ├── clientAnalytics.ts   # Cash flow, portfolio math & Z-score algorithms
-│   │   └── csvParser.ts         # Smart CSV parser, column detector & exporter
-│   └── components/
-│       ├── Header.tsx           # Navigation bar with inline customizable title
-│       ├── MetricCards.tsx       # Executive financial KPI summary cards
-│       ├── TransactionsTable.tsx # Ledger with search, filters & inline category edit
-│       ├── PortfolioView.tsx    # Holdings table, benchmark selector & live API lookup
-│       ├── StockWishlistView.tsx# Target buy tracker, Buy Zone badges & promote dialog
-│       ├── AnomaliesView.tsx    # Z-score outlier inspector with dismiss/restore
-│       ├── charts/
-│       │   ├── CashFlowChart.tsx   # Interactive SVG monthly income vs outflow curve
-│       │   ├── BenchmarkChart.tsx  # Normalized performance index vs SPY & QQQ
-│       │   └── AllocationChart.tsx # Segmented asset class & sector exposure meter
-│       └── modals/
-│           ├── ImportModal.tsx        # CSV upload, raw paste & template preview
-│           ├── AddTransactionModal.tsx # Manual transaction entry with auto-predict
-│           ├── AddInvestmentModal.tsx  # Holding entry with price lookup
-│           └── AddWishlistModal.tsx    # Stock wishlist target entry modal
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start the dev server
+```bash
+npm run dev
+```
+
+### 4. View in your browser
+Open your browser and navigate to:
+```
+http://localhost:3000
 ```
 
 ---
 
-## 📊 Sample CSV Data Format
+## 📑 Sample CSV Formats
 
-You can import transactions or investment holdings directly using standard CSV formats:
+Want to import your own spreadsheets? You can format your CSV files simply like this:
 
 ### Transactions CSV Format
 ```csv
@@ -150,3 +148,14 @@ QQQ,Invesco QQQ Trust,32,395.00,492.10,ETFs,Technology
 AAPL,Apple Inc.,40,185.00,232.50,Stocks,Consumer Tech
 NVDA,NVIDIA Corporation,65,88.50,138.25,Stocks,Semiconductors
 ```
+
+---
+
+<div align="center">
+  <p>Made with ❤️ for smart personal finance & portfolio management.</p>
+  <p>
+    <a href="https://ais-pre-b5wzigtee55fljcgluwfvw-138451579228.us-east1.run.app" target="_blank" rel="noopener noreferrer">
+      <strong>▶ Launch the AuraFinance Dashboard in your browser</strong>
+    </a>
+  </p>
+</div>
