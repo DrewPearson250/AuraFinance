@@ -1,58 +1,16 @@
 import { Transaction, Investment, BenchmarkItem } from '../types/finance';
 
 export const INITIAL_TRANSACTIONS: Transaction[] = [
-  // 2026-10 (Current Month)
   { id: 'tx-001', date: '2026-10-01', description: 'Tech Corp Direct Deposit Payroll', amount: 4850.00, category: 'Income & Salary', categoryConfidence: 0.98 },
   { id: 'tx-002', date: '2026-10-02', description: 'Apex Residential Rent Payment', amount: -1950.00, category: 'Housing & Utilities', categoryConfidence: 0.95 },
-  { id: 'tx-003', date: '2026-10-03', description: 'Whole Foods Market Organic Groceries', amount: -142.30, category: 'Food & Dining', categoryConfidence: 0.92 },
-  { id: 'tx-004', date: '2026-10-04', description: 'Uber Ride to Downtown Client Site', amount: -38.45, category: 'Transportation', categoryConfidence: 0.94 },
-  { id: 'tx-005', date: '2026-10-05', description: 'Coursera ML & Quantitative Finance Spec', amount: -399.00, category: 'Education', categoryConfidence: 0.96 },
-  { id: 'tx-006', date: '2026-10-06', description: 'Starbucks Reserve Cold Brew', amount: -6.75, category: 'Food & Dining', categoryConfidence: 0.95 },
-  { id: 'tx-007', date: '2026-10-07', description: 'Chevron Station Fuel Fillup', amount: -54.20, category: 'Transportation', categoryConfidence: 0.92 },
-  { id: 'tx-008', date: '2026-10-08', description: 'Precision Auto Transmission & Brake Repair', amount: -845.00, category: 'Transportation', categoryConfidence: 0.88 }, // Anomaly!
-  { id: 'tx-009', date: '2026-10-08', description: 'Blue Bottle Coffee Roasters', amount: -42.50, category: 'Food & Dining', categoryConfidence: 0.90 },
-  { id: 'tx-010', date: '2026-10-08', description: 'Blue Bottle Coffee Roasters', amount: -42.50, category: 'Food & Dining', categoryConfidence: 0.90 }, // Duplicate charge anomaly!
-  { id: 'tx-011', date: '2026-10-09', description: 'Netflix Premium 4K UHD Subscription', amount: -22.99, category: 'Entertainment & Subs', categoryConfidence: 0.97 },
-  { id: 'tx-012', date: '2026-10-10', description: 'Trader Joe Grocery Haul', amount: -86.15, category: 'Food & Dining', categoryConfidence: 0.93 },
-
-  // 2026-09
-  { id: 'tx-013', date: '2026-09-01', description: 'Tech Corp Direct Deposit Payroll', amount: 4850.00, category: 'Income & Salary', categoryConfidence: 0.98 },
-  { id: 'tx-014', date: '2026-09-02', description: 'Apex Residential Rent Payment', amount: -1950.00, category: 'Housing & Utilities', categoryConfidence: 0.95 },
-  { id: 'tx-015', date: '2026-09-03', description: 'Consolidated Edison Power & Gas', amount: -128.40, category: 'Housing & Utilities', categoryConfidence: 0.94 },
-  { id: 'tx-016', date: '2026-09-05', description: 'Trader Joe Weekly Groceries', amount: -115.80, category: 'Food & Dining', categoryConfidence: 0.93 },
-  { id: 'tx-017', date: '2026-09-07', description: 'United Airlines Roundtrip UA812 Denver', amount: -680.00, category: 'Travel', categoryConfidence: 0.92 }, // Travel spike anomaly!
-  { id: 'tx-018', date: '2026-09-10', description: 'Target Home Supplies & Essentials', amount: -94.20, category: 'Shopping & Retail', categoryConfidence: 0.90 },
-  { id: 'tx-019', date: '2026-09-12', description: 'Barnes & Noble Quantitative Investing Books', amount: -68.50, category: 'Education', categoryConfidence: 0.91 },
-  { id: 'tx-020', date: '2026-09-15', description: 'Freelance Software Architectural Advisory', amount: 1600.00, category: 'Income & Salary', categoryConfidence: 0.90 },
-  { id: 'tx-021', date: '2026-09-16', description: 'Spotify Family Plan Monthly', amount: -19.99, category: 'Entertainment & Subs', categoryConfidence: 0.98 },
-  { id: 'tx-022', date: '2026-09-18', description: 'Sweetgreen Harvest Bowl Lunch', amount: -17.40, category: 'Food & Dining', categoryConfidence: 0.92 },
-  { id: 'tx-023', date: '2026-09-21', description: 'MTA MetroCard 30-Day Transit Pass', amount: -132.00, category: 'Transportation', categoryConfidence: 0.95 },
-  { id: 'tx-024', date: '2026-09-24', description: 'Equinox Fitness Club Membership', amount: -220.00, category: 'Health & Wellness', categoryConfidence: 0.94 },
-  { id: 'tx-025', date: '2026-09-27', description: 'Amazon Prime Web Order Hardware Tools', amount: -76.85, category: 'Shopping & Retail', categoryConfidence: 0.93 },
-  { id: 'tx-026', date: '2026-09-30', description: 'Dividend Payment Vanguard S&P 500 ETF', amount: 114.50, category: 'Income & Salary', categoryConfidence: 0.92 },
-
-  // 2026-08
-  { id: 'tx-027', date: '2026-08-01', description: 'Tech Corp Direct Deposit Payroll', amount: 4850.00, category: 'Income & Salary', categoryConfidence: 0.98 },
-  { id: 'tx-028', date: '2026-08-02', description: 'Apex Residential Rent Payment', amount: -1950.00, category: 'Housing & Utilities', categoryConfidence: 0.95 },
-  { id: 'tx-029', date: '2026-08-04', description: 'Whole Foods Market Groceries', amount: -156.40, category: 'Food & Dining', categoryConfidence: 0.92 },
-  { id: 'tx-030', date: '2026-08-07', description: 'Shell Oil Co Station Gas', amount: -48.90, category: 'Transportation', categoryConfidence: 0.93 },
-  { id: 'tx-031', date: '2026-08-11', description: 'Executive Data Science Bootcamp Deposit', amount: -540.00, category: 'Education', categoryConfidence: 0.95 }, // Anomaly
-  { id: 'tx-032', date: '2026-08-14', description: 'Apple.com iCloud Storage & Music', amount: -14.99, category: 'Entertainment & Subs', categoryConfidence: 0.96 },
-  { id: 'tx-033', date: '2026-08-16', description: 'Chipotle Mexican Grill Dinner', amount: -16.80, category: 'Food & Dining', categoryConfidence: 0.94 },
-  { id: 'tx-034', date: '2026-08-18', description: 'Xfinity High Speed Broadband Internet', amount: -85.00, category: 'Housing & Utilities', categoryConfidence: 0.95 },
-  { id: 'tx-035', date: '2026-08-22', description: 'CVS Pharmacy Prescription & Care', amount: -38.60, category: 'Health & Wellness', categoryConfidence: 0.91 },
-  { id: 'tx-036', date: '2026-08-26', description: 'Lyft Premier Airport Ride', amount: -62.10, category: 'Transportation', categoryConfidence: 0.95 },
-  { id: 'tx-037', date: '2026-08-29', description: 'Best Buy Wireless Noise Cancelling Tech', amount: -249.99, category: 'Shopping & Retail', categoryConfidence: 0.92 },
-
-  // 2026-07
-  { id: 'tx-038', date: '2026-07-01', description: 'Tech Corp Direct Deposit Payroll', amount: 4850.00, category: 'Income & Salary', categoryConfidence: 0.98 },
-  { id: 'tx-039', date: '2026-07-02', description: 'Apex Residential Rent Payment', amount: -1950.00, category: 'Housing & Utilities', categoryConfidence: 0.95 },
-  { id: 'tx-040', date: '2026-07-05', description: 'Costco Wholesale Club Food Supplies', amount: -284.10, category: 'Food & Dining', categoryConfidence: 0.91 },
-  { id: 'tx-041', date: '2026-07-09', description: 'BP Fuel Station Highway', amount: -51.30, category: 'Transportation', categoryConfidence: 0.93 },
-  { id: 'tx-042', date: '2026-07-14', description: 'Udemy Algorithmic Trading Bootcamp Course', amount: -49.99, category: 'Education', categoryConfidence: 0.97 },
-  { id: 'tx-043', date: '2026-07-20', description: 'AMC Cinema IMAX Movie Tickets', amount: -36.50, category: 'Entertainment & Subs', categoryConfidence: 0.92 },
-  { id: 'tx-044', date: '2026-07-25', description: 'Trader Joe Organic Produce', amount: -108.40, category: 'Food & Dining', categoryConfidence: 0.93 },
-  { id: 'tx-045', date: '2026-07-28', description: 'Equinox Gym Health Club', amount: -220.00, category: 'Health & Wellness', categoryConfidence: 0.94 }
+  { id: 'tx-003', date: '2026-10-03', description: 'Metro Transit Subway Pass', amount: -32.50, category: 'Transportation', categoryConfidence: 0.95 },
+  { id: 'tx-004', date: '2026-10-04', description: 'Chevron Station Fuel Fillup', amount: -48.20, category: 'Transportation', categoryConfidence: 0.92 },
+  { id: 'tx-005', date: '2026-10-05', description: 'Precision Auto Transmission & Brake Repair', amount: -845.00, category: 'Transportation', categoryConfidence: 0.88 }, // Anomaly: 17.5x Transportation median ($48.20)
+  { id: 'tx-006', date: '2026-10-06', description: 'Sweetgreen Organic Lunch', amount: -18.75, category: 'Food & Dining', categoryConfidence: 0.94 },
+  { id: 'tx-007', date: '2026-10-07', description: 'Chipotle Mexican Grill', amount: -19.50, category: 'Food & Dining', categoryConfidence: 0.93 },
+  { id: 'tx-008', date: '2026-10-08', description: 'Blue Bottle Coffee Roasters', amount: -42.50, category: 'Food & Dining', categoryConfidence: 0.90 },
+  { id: 'tx-009', date: '2026-10-08', description: 'Blue Bottle Coffee Roasters', amount: -42.50, category: 'Food & Dining', categoryConfidence: 0.90 },  // Anomaly: Velocity duplicate charge on same date
+  { id: 'tx-010', date: '2026-10-09', description: 'Nobu Restaurant & Omakase Dinner', amount: -540.00, category: 'Food & Dining', categoryConfidence: 0.96 }  // Anomaly: 12.7x Food & Dining median ($42.50)
 ];
 
 export const INITIAL_INVESTMENTS: Investment[] = [
@@ -224,22 +182,14 @@ export const INITIAL_WISHLIST = [
 export const SAMPLE_TRANSACTIONS_CSV = `Date,Description,Amount,Category
 2026-10-01,Tech Corp Direct Deposit Payroll,4850.00,Income & Salary
 2026-10-02,Apex Residential Rent Payment,-1950.00,Housing & Utilities
-2026-10-03,Whole Foods Market Organic Groceries,-142.30,Food & Dining
-2026-10-04,Uber Ride to Downtown Client Site,-38.45,Transportation
-2026-10-05,Coursera ML & Quantitative Finance Spec,-399.00,Education
-2026-10-06,Starbucks Reserve Cold Brew,-6.75,Food & Dining
-2026-10-07,Chevron Station Fuel Fillup,-54.20,Transportation
-2026-10-08,Precision Auto Transmission & Brake Repair,-845.00,Transportation
+2026-10-03,Metro Transit Subway Pass,-32.50,Transportation
+2026-10-04,Chevron Station Fuel Fillup,-48.20,Transportation
+2026-10-05,Precision Auto Transmission & Brake Repair,-845.00,Transportation
+2026-10-06,Sweetgreen Organic Lunch,-18.75,Food & Dining
+2026-10-07,Chipotle Mexican Grill,-19.50,Food & Dining
 2026-10-08,Blue Bottle Coffee Roasters,-42.50,Food & Dining
 2026-10-08,Blue Bottle Coffee Roasters,-42.50,Food & Dining
-2026-10-09,Netflix Premium 4K UHD Subscription,-22.99,Entertainment & Subs
-2026-10-10,Trader Joe Grocery Haul,-86.15,Food & Dining
-2026-09-01,Tech Corp Direct Deposit Payroll,4850.00,Income & Salary
-2026-09-02,Apex Residential Rent Payment,-1950.00,Housing & Utilities
-2026-09-07,United Airlines Roundtrip Denver,-680.00,Travel
-2026-09-12,Barnes & Noble Quantitative Investing Books,-68.50,Education
-2026-09-15,Freelance Software Advisory,1600.00,Income & Salary
-2026-09-24,Equinox Fitness Club Membership,-220.00,Health & Wellness`;
+2026-10-09,Nobu Restaurant & Omakase Dinner,-540.00,Food & Dining`;
 
 export const SAMPLE_INVESTMENTS_CSV = `Ticker,Name,Shares,BuyPrice,CurrentPrice,AssetClass,Sector
 VOO,Vanguard S&P 500 ETF,45,440.00,524.80,ETFs,Broad Market

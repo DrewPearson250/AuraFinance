@@ -94,7 +94,7 @@ export const MetricCards: React.FC<MetricCardsProps> = ({
             <span className="text-slate-300">/</span>
             <span className="text-rose-600">-${cashFlow.totalExpenses.toLocaleString('en-US', { maximumFractionDigits: 0 })} out</span>
           </div>
-          <span className="text-slate-700 font-medium">4-Mo Window</span>
+          <span className="text-slate-700 font-medium">Current Period</span>
         </div>
       </div>
 

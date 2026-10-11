@@ -36,11 +36,14 @@ export default function App() {
   // Tab state (Python Lab tab removed per user request)
   const [activeTab, setActiveTab] = useState<'overview' | 'expenses' | 'portfolio' | 'wishlist' | 'anomalies'>('overview');
 
-  // Core financial state with localStorage persistence
+  // Core financial state with localStorage persistence (v3 calibrated 10-transaction view)
   const [transactions, setTransactions] = useState<Transaction[]>(() => {
     try {
-      const saved = localStorage.getItem('aurafinance_tx_v1');
-      return saved ? JSON.parse(saved) : INITIAL_TRANSACTIONS;
+      const savedV3 = localStorage.getItem('aurafinance_tx_v3');
+      if (savedV3) return JSON.parse(savedV3);
+      localStorage.removeItem('aurafinance_tx_v2');
+      localStorage.removeItem('aurafinance_tx_v1');
+      return INITIAL_TRANSACTIONS;
     } catch {
       return INITIAL_TRANSACTIONS;
     }
@@ -95,7 +98,7 @@ export default function App() {
 
   useEffect(() => {
     try {
-      localStorage.setItem('aurafinance_tx_v1', JSON.stringify(transactions));
+      localStorage.setItem('aurafinance_tx_v3', JSON.stringify(transactions));
     } catch (e) {
       console.error(e);
     }
@@ -257,6 +260,8 @@ export default function App() {
       setWishlist(INITIAL_WISHLIST);
       setDismissedAnomalyIds([]);
       setSiteName('AuraFinance');
+      localStorage.removeItem('aurafinance_tx_v3');
+      localStorage.removeItem('aurafinance_tx_v2');
       localStorage.removeItem('aurafinance_tx_v1');
       localStorage.removeItem('aurafinance_inv_v1');
       localStorage.removeItem('aurafinance_wish_v1');
