@@ -1,4 +1,4 @@
-# AuraWish — Personal Finance, Portfolio & Stock Wishlist Analytics
+# AuraFinance — Personal Finance, Portfolio & Stock Wishlist Analytics
 
 [![React](https://img.shields.io/badge/React-19.0-61dafb?logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -6,7 +6,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-**AuraWish** is a modern personal finance and investment analytics platform. It automatically categorizes spending habits from bank CSV files, flags statistical spending anomalies using $Z$-score algorithms, tracks investment portfolio returns against market benchmarks (S&P 500, Nasdaq 100), and monitors target stock acquisition prices via an interactive **Stock Wishlist**.
+**AuraFinance** is a modern personal finance and investment analytics platform. It automatically categorizes spending habits from bank CSV files, flags statistical spending anomalies using $Z$-score algorithms, tracks investment portfolio returns against market benchmarks (S&P 500, Nasdaq 100), and monitors target stock acquisition prices via an interactive **Stock Wishlist**.
 
 ---
 
