@@ -24,9 +24,13 @@ import { exportToCSV } from './utils/csvParser';
 import { ArrowRight, Bookmark, AlertTriangle } from 'lucide-react';
 
 export default function App() {
-  // Site Name customization
+  // Site Name customization (default: AuraFinance)
   const [siteName, setSiteName] = useState(() => {
-    return localStorage.getItem('aurafinance_sitename_v1') || 'AuraWish Finance';
+    const saved = localStorage.getItem('aurafinance_sitename_v1');
+    if (!saved || saved.toLowerCase().includes('aurawish')) {
+      return 'AuraFinance';
+    }
+    return saved;
   });
 
   // Tab state (Python Lab tab removed per user request)
@@ -252,7 +256,7 @@ export default function App() {
       setInvestments(INITIAL_INVESTMENTS);
       setWishlist(INITIAL_WISHLIST);
       setDismissedAnomalyIds([]);
-      setSiteName('AuraWish Finance');
+      setSiteName('AuraFinance');
       localStorage.removeItem('aurafinance_tx_v1');
       localStorage.removeItem('aurafinance_inv_v1');
       localStorage.removeItem('aurafinance_wish_v1');

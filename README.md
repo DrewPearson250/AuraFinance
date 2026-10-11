@@ -69,8 +69,8 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/aurawish-finance.git
-   cd aurawish-finance
+   git clone https://github.com/your-username/aurafinance.git
+   cd aurafinance
    ```
 
 2. **Install dependencies:**
