@@ -10,7 +10,7 @@
   <!-- Live Demo Button -->
   <p>
     <a href="https://aurafinance-personal-financeinvestment.ai.studio" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.shields.io/badge/🚀_OPEN_LIVE_WEBSITE-CLICK_HERE_TO_LAUNCH-059669?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Live Website" />
+      <img src="https://img.shields.io/badge/_OPEN_LIVE_WEBSITE-CLICK_HERE_TO_LAUNCH-059669?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Live Website" />
     </a>
   </p>
 
