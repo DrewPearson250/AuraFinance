@@ -9,7 +9,7 @@
 
   <!-- Live Demo Button -->
   <p>
-    <a href="https://ais-pre-b5wzigtee55fljcgluwfvw-138451579228.us-east1.run.app" target="_blank" rel="noopener noreferrer">
+    <a href="https://aurafinance-personal-financeinvestment.ai.studio" target="_blank" rel="noopener noreferrer">
       <img src="https://img.shields.io/badge/🚀_OPEN_LIVE_WEBSITE-CLICK_HERE_TO_LAUNCH-059669?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Live Website" />
     </a>
   </p>
@@ -45,7 +45,7 @@ If you find spreadsheets complicated or banking apps cluttered, **AuraFinance** 
 
 You don't need any special setup or account to get started:
 
-1. **Open the Website:** Click the **[Launch Live Website](https://ais-pre-b5wzigtee55fljcgluwfvw-138451579228.us-east1.run.app)** button. It loads pre-filled with realistic sample data so you can explore immediately.
+1. **Open the Website:** Click the **[Launch Live Website](https://aurafinance-personal-financeinvestment.ai.studio)** button. It loads pre-filled with realistic sample data so you can explore immediately.
 2. **Import Your Own Data (Optional):** Click **Import CSV** in the top bar to upload your own bank or brokerage export, or keep exploring with the pre-loaded data.
 3. **Explore the Tabs:**
    * **Overview:** High-level net worth, monthly savings rate, and cash flow curves.
@@ -154,8 +154,11 @@ NVDA,NVIDIA Corporation,65,88.50,138.25,Stocks,Semiconductors
 <div align="center">
   <p>Made with ❤️ for smart personal finance & portfolio management.</p>
   <p>
-    <a href="https://ais-pre-b5wzigtee55fljcgluwfvw-138451579228.us-east1.run.app" target="_blank" rel="noopener noreferrer">
+    <a href="https://aurafinance-personal-financeinvestment.ai.studio" target="_blank" rel="noopener noreferrer">
       <strong>▶ Launch the AuraFinance Dashboard in your browser</strong>
     </a>
+  </p>
+  <p>
+    <sub>Direct link: <a href="https://aurafinance-personal-financeinvestment.ai.studio">https://aurafinance-personal-financeinvestment.ai.studio</a></sub>
   </p>
 </div>
